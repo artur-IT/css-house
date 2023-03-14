@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Domek</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: lightsteelblue;
+      }
+      span {
+        position: fixed;
+        top: 5vw;
+        left: 5vw;
+        width: 100px;
+        height: 30px;
+        color: white;
+        font-family: arial;
+        background-color: brown;
+        padding: 10px 20px;
+        line-height: 200%;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      div {
+        position: absolute;
+        top: 80vh;
+        left: 10vw;
+        width: 1vw;
+        height: 1vw;
+        transition: 1s;
+      }
+
+      /* ściana */
+      span:hover ~ div:nth-child(2) {
+        position: absolute;
+        top: 34vw;
+        left: calc(50vw - 22vw);
+        width: 44vw;
+        height: 30vw;
+        background-color: brown;
+        transition: 1s;
+      }
+      /* okno L  */
+      span:hover ~ div:nth-child(3) {
+        position: relative;
+        top: 38vw;
+        left: calc(50vw - 5vw - 13vw);
+        width: 10vw;
+        height: 10vw;
+        background-color: yellow;
+        z-index: 1;
+        transition: 1s 0.6s;
+      }
+      /* okno R */
+      span:hover ~ div:nth-child(4) {
+        position: relative;
+        top: 28vw;
+        left: calc(50vw - 5vw + 13vw);
+        width: 10vw;
+        height: 10vw;
+        background-color: yellow;
+        z-index: 1;
+        transition: 1s 0.4s;
+      }
+      /* drzwi */
+      span:hover ~ div:nth-child(5) {
+        position: relative;
+        top: 32vw;
+        left: calc(50vw - 4vw);
+        width: 10vw;
+        height: 12vw;
+        background-color: darkslategray;
+        z-index: 1;
+        transition: 1s 0.8s linear;
+        transform: rotate(360deg);
+      }
+      /* dach */
+      span:hover ~ div:nth-child(6) {
+        position: absolute;
+        top: 18.5vw;
+        left: calc(50vw - 15.5vw);
+        width: 31vw;
+        height: 31vw;
+        background-color: black;
+        transform: rotate(135deg);
+        z-index: -1;
+        transition: 1s;
+      }
+      /* komin*/
+      span:hover ~ div:nth-child(7) {
+        position: absolute;
+        top: 20vw;
+        left: calc(50vw + 10vw);
+        width: 5vw;
+        height: 10vw;
+        background-color: darkgreen;
+        z-index: -2;
+        transition: 1s 0.9s;
+      }
+      /* 100% my work  */
+    </style>
+  </head>
+
+  <body>
+    <span>BUDUJEMY</span>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </body>
+</html>
